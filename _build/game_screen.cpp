@@ -11,13 +11,18 @@ void DrawGameplayScreen(void) {
     //Texture2D Background = LoadTexture("resources/raw2.png");
     Texture2D Start_Button = LoadTexture("resources/start_screen/Start_Button.png");
     
-    BeginDrawing();
-    ClearBackground(RAYWHITE);
 
-    DrawText("Mouse x: ", 0, 0, 30, BLACK);
-    DrawText("Mouse y: ", 0, 30, 30, BLACK);
-    //DrawTexture(Background, 1, 1, RAYWHITE);
-    DrawTexture(Coffe, 500, 230, RAYWHITE);
-    DrawTexture(Theke, 1, 2, RAYWHITE);
-    EndDrawing();
+    while (!WindowShouldClose()) {
+        BeginDrawing();
+        ClearBackground(RAYWHITE);
+
+        DrawText("Mouse x: ", 0, 0, 30, BLACK);
+        DrawText("Mouse y: ", 0, 30, 30, BLACK);
+        //DrawTexture(Background, 1, 1, RAYWHITE);
+        DrawTexture(Coffe, 500, 230, RAYWHITE);
+        DrawTexture(Theke, 1, 2, RAYWHITE);
+        EndDrawing();
+    };
+
+   
 }

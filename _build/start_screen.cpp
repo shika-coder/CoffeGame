@@ -32,8 +32,13 @@ void DrawLogoScreen(void) {
         // Check button state
         if (CheckCollisionPointRec(mousePoint, btnBounds))
         {
-            if (IsMouseButtonDown(MOUSE_BUTTON_LEFT)) btnState = 2;
+            if (IsMouseButtonDown(MOUSE_BUTTON_LEFT)) {
+                btnState = 2;
+            }
             else btnState = 1;
+            if (btnState == 2) {
+               
+            }
 
             if (IsMouseButtonReleased(MOUSE_BUTTON_LEFT)) btnAction = true;
         }

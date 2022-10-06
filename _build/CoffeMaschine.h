@@ -5,12 +5,5 @@
 #include <iostream>
 
 
-//Vector2 actMousePos = GetMousePosition();
-
-
-inline void CheckForCoffe() {
-	
-}
-
 
 #endif

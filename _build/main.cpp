@@ -21,25 +21,40 @@ void update() {
     if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT)) {
         std::cout << "left clicked!" << std::endl;
     }
-    
+
     std::cout << actMousePosX << " : " << actMousePosY << std::endl;
 
-}
-
-
+};
 int main() {
-    
-    currentScreen = 
 
-    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
-    SetTargetFPS(60);
+    InitWindow(screenWidth, screenHeight, "Coffe - Game");
 
 
-    
-    
 
-    DrawLogoScreen();
+    while (!WindowShouldClose()) {
+        BeginDrawing();
+        DrawGameplayScreen();
+        EndDrawing();
+    }
     CloseWindow();
 
     return 0;
+}
+
+
+static void ChangeToScreen(int  screen)
+{
+    // Unload current screen
+
+    // Init next screen
+    switch (screen)
+    {
+    case LOGO: InitLogoScreen(); break;
+    case TITLE: InitTitleScreen(); break;
+    case GAMEPLAY: InitGameplayScreen(); break;
+    case ENDING: InitEndingScreen(); break;
+    default: break;
+    }
+
+    currentScreen = screen;
 }
