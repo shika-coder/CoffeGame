@@ -175,6 +175,7 @@
   <ItemGroup>
     <ClCompile Include="game_screen.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Quelle.cpp" />
     <ClCompile Include="start_screen.cpp" />
   </ItemGroup>
   <ItemGroup>

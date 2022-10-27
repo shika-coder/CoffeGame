@@ -33,10 +33,14 @@ int main() {
 
     while (!WindowShouldClose()) {
         BeginDrawing();
-        DrawGameplayScreen();
-        EndDrawing();
+        DrawLogoScreen();
+
+        if (IsKeyPressed(KEY_ESCAPE)) {
+            EndDrawing();
+            CloseWindow();
+        };
+        
     }
-    CloseWindow();
 
     return 0;
 }
@@ -56,5 +60,4 @@ static void ChangeToScreen(int  screen)
     default: break;
     }
 
-    currentScreen = screen;
 }
