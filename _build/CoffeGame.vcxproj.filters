@@ -21,9 +21,18 @@
     <ClCompile Include="Quelle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ChangeToScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CoffeMaschine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CoffeMaschine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="changeToScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

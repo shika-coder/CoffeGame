@@ -1,6 +1,8 @@
 #include "raylib.h"
 #include "CoffeMaschine.h"
 #include "screens.h"
+#include "changeToScreen.h"
+#include <iostream>
 
 
 const int screenWidth = 800;
@@ -8,6 +10,7 @@ const int screenHeight = 800;
 
 int actMousePosX = GetMouseX();
 int actMousePosY = GetMouseY();
+
 
 
 void update() {
@@ -27,37 +30,16 @@ void update() {
 };
 int main() {
 
-    InitWindow(screenWidth, screenHeight, "Coffe - Game");
-
+    InitWindow(screenWidth, screenHeight, "TITLE");
 
 
     while (!WindowShouldClose()) {
-        BeginDrawing();
-        DrawLogoScreen();
-
-        if (IsKeyPressed(KEY_ESCAPE)) {
-            EndDrawing();
-            CloseWindow();
-        };
-        
+        //DrawLogoScreen();
+        //DrawGameplayScreen();
+        ChangeToScreen(1);
     }
 
     return 0;
 }
 
 
-static void ChangeToScreen(int  screen)
-{
-    // Unload current screen
-
-    // Init next screen
-    switch (screen)
-    {
-    case LOGO: InitLogoScreen(); break;
-    case TITLE: InitTitleScreen(); break;
-    case GAMEPLAY: InitGameplayScreen(); break;
-    case ENDING: InitEndingScreen(); break;
-    default: break;
-    }
-
-}

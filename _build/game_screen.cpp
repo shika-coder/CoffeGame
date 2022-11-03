@@ -24,5 +24,5 @@ void DrawGameplayScreen(void) {
         EndDrawing();
     };
 
-   
+    CloseWindow();
 }
